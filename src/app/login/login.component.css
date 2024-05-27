@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.bodyContent {
+  background-image: url('/images/login-car.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  height: 100vh;           /* Full viewport height */
+}
+
+.login {
+  width: 1000px;            /* Adjust the width as needed */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add some styling */
+  background-color: white; /* Optional: set a background color */
+  border-radius: 8px;      /* Optional: add rounded corners */
+}
+
+
+h1.login{
+  font-size: large;
+  font-weight: bold;
+}

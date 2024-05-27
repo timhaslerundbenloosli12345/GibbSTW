@@ -1,0 +1,33 @@
+.maincontent {
+  margin-top: 20px;
+  background-color: gray;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  width: 900px; /* oder 500px, je nachdem welche Breite Sie möchten */
+}
+
+.bottomContent {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+}
+.offer-card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.offer-card img {
+  width: 100%;
+  height: auto;
+}
+
+.buttonContent{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
