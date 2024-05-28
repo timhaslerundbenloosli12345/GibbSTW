@@ -1,5 +1,12 @@
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #f8f9fa;
+  margin: 0;
+}
+main {
+  flex: 1;
 }
 .cart-container {
   margin-top: 50px;
@@ -38,4 +45,7 @@ body {
 .cart-summary .btn-buy {
   margin-top: 20px;
   width: 100%;
+}
+footer {
+  background-color: rgb(45,48,53);
 }
