@@ -6,6 +6,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { PartsComponent } from './parts/parts.component';
 import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
 import { PartDetailsComponent } from './part-details/part-details.component';
+import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,5 +17,6 @@ export const routes: Routes = [
   {path: 'parts', component: PartsComponent},
   {path: 'shopingCart', component: ShopingCartComponent},
   {path: 'part-details', component: PartDetailsComponent},
+  {path: 'adminPortal', component: AdminPortalComponent},
   {path: '**', component: HomeComponent}
 ];

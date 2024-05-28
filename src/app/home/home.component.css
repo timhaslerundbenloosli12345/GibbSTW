@@ -27,7 +27,9 @@
 
 .buttonContent{
   height: 100px;
-  display: flex;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: auto auto;
   justify-content: center;
   align-items: center;
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(private router: Router){}
+
+  ngOnInit(): void {
+  }
+
+  btnShopingClick(){this.router.navigate(['/parts'])}
+  btnAdminPortalClick(){this.router.navigate(['/adminPortal'])}
 
 }
