@@ -1,3 +1,4 @@
+<!-- Navigationsleiste -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">STW</a>
@@ -27,92 +28,100 @@
     </div>
   </div>
 </nav>
+
+<!-- Hauptinhalt -->
 <body>
-    <div class="container mt-5">
-        <div class="form-section">
-            <h4>AutoMarke hinzufügen</h4>
-            <form>
-                <div class="form-group row">
-                    <label for="carBrand" class="col-sm-2 col-form-label">Markenname</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="carBrand" placeholder="Markenname">
-                    </div>
-                </div>
-                <button type="button" class="btn btn-primary">Hinzufügen</button>
-            </form>
-        </div>
+  <div class="container mt-5">
 
-        <div class="form-section">
-            <h4>Modell erstellen</h4>
-            <form>
-                <div class="form-group row">
-                    <label for="modelName" class="col-sm-2 col-form-label">Modellname</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="modelName" placeholder="Modellname">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="carBrandSelect" class="col-sm-2 col-form-label">Marke</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" id="carBrandSelect">
-                            <option>Marke auswählen</option>
-                            <!-- Add options here dynamically -->
-                        </select>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-primary">Hinzufügen</button>
-            </form>
+    <!-- Formular zum Hinzufügen einer neuen Automarke -->
+    <div class="form-section">
+      <h4>Add Car Brand</h4>
+      <form>
+        <div class="form-group row">
+          <label for="carBrand" class="col-sm-2 col-form-label">Brand Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="carBrand" placeholder="Brand Name" name="brandName" [(ngModel)]="brandName" [ngModelOptions]="{standalone: true}">
+          </div>
         </div>
-
-        <div class="form-section">
-            <h4>Produkt hinzufügen</h4>
-            <form>
-                <div class="form-group row">
-                    <label for="productName" class="col-sm-2 col-form-label">Produktname</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="productName" placeholder="Produktname">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="productPrice" class="col-sm-2 col-form-label">Preis</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" id="productPrice" placeholder="Preis">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="productDescription" class="col-sm-2 col-form-label">Beschreibung</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" id="productDescription" rows="3" placeholder="Beschreibung"></textarea>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="productImage" class="col-sm-2 col-form-label">Bild hochladen</label>
-                    <div class="col-sm-10">
-                        <input type="file" class="form-control-file" id="productImage">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="carModelSelect" class="col-sm-2 col-form-label">Modell</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" id="carModelSelect" multiple>
-                            <option>Modell auswählen</option>
-                            <!-- Add options here dynamically -->
-                        </select>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-primary">Hinzufügen</button>
-            </form>
-        </div>
+        <button type="button" class="btn btn-primary" (click)="addBrand()">Add</button>
+      </form>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Formular zum Erstellen eines Modells -->
+    <div class="form-section">
+      <h4>Modell erstellen</h4>
+      <form>
+        <div class="form-group row">
+          <label for="modelName" class="col-sm-2 col-form-label">Modellname</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="modelName" placeholder="Modellname">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="carBrandSelect" class="col-sm-2 col-form-label">Marke</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="carBrandSelect">
+              <option>Marke auswählen</option>
+              <!-- Dynamische Optionen hier hinzufügen -->
+            </select>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary">Hinzufügen</button>
+      </form>
+    </div>
+
+    <!-- Formular zum Hinzufügen eines Produkts -->
+    <div class="form-section">
+      <h4>Produkt hinzufügen</h4>
+      <form>
+        <div class="form-group row">
+          <label for="productName" class="col-sm-2 col-form-label">Produktname</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="productName" placeholder="Produktname">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="productPrice" class="col-sm-2 col-form-label">Preis</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="productPrice" placeholder="Preis">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="productDescription" class="col-sm-2 col-form-label">Beschreibung</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="productDescription" rows="3" placeholder="Beschreibung"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="productImage" class="col-sm-2 col-form-label">Bild hochladen</label>
+          <div class="col-sm-10">
+            <input type="file" class="form-control-file" id="productImage">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="carModelSelect" class="col-sm-2 col-form-label">Modell</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="carModelSelect" multiple>
+              <option>Modell auswählen</option>
+              <!-- Dynamische Optionen hier hinzufügen -->
+            </select>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary">Hinzufügen</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap und jQuery Skripte -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-<footer  id="impressumFooter" class="bg-dark text-center text-white w-100">
+
+<!-- Footer -->
+<footer id="impressumFooter" class="bg-dark text-center text-white w-100">
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2024 Copyright,
     <a class="text-white" href="impressum">impressum</a>
   </div>
 </footer>
-

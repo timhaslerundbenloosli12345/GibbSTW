@@ -1,10 +1,15 @@
+<!-- Navbar-Komponente -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
+    <!-- Brand-Link zur Startseite -->
     <a class="navbar-brand" href="#">STW</a>
+    <!-- Toggler für den Navbar-Button in kleineren Ansichten -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Navbar-Collapse, enthält die Navigationslinks -->
     <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Haupt-Navigationslinks -->
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="home">Home</a>
@@ -16,10 +21,12 @@
           <a class="nav-link" href="shopingCart">Warenkorb</a>
         </li>
       </ul>
+      <!-- Zusätzliche Navigationslinks -->
       <ul class="nav">
         <li class="nav-item">
           <a class="nav-link" href="login">Login</a>
         </li>
+        <!-- Aktiver Link für die Registrierungsseite -->
         <li class="nav-item">
           <a class="nav-link active" aria-current="page"  href="registration">Registrieren</a>
         </li>
@@ -27,26 +34,34 @@
     </div>
   </div>
 </nav>
+
+<!-- Hauptinhalt der Seite -->
 <div class="bodyContent">
+  <!-- Registrierungsformular -->
   <div class="login">
-    <h1>Login</h1>
+    <h1>Registrieren</h1>
     <form class="row g-3">
+      <!-- Vorname-Eingabefeld -->
       <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Vorname</label>
         <input type="email" class="form-control" id="inputEmail4">
       </div>
+      <!-- Nachname-Eingabefeld -->
       <div class="col-md-6">
         <label for="inputPassword4" class="form-label">Nachname</label>
         <input type="password" class="form-control" id="inputPassword4">
       </div>
+      <!-- Emailadresse-Eingabefeld -->
       <div class="col-12">
         <label for="inputAddress" class="form-label">Emailadresse</label>
         <input type="text" class="form-control" id="inputAddress" placeholder="Lorrainestrasse 5B, 3013 Bern">
       </div>
+      <!-- Passwort-Eingabefeld -->
       <div class="col-12">
         <label for="inputAddress2" class="form-label">Passwort</label>
         <input type="text" class="form-control" id="inputAddress2">
       </div>
+      <!-- Button zum Speichern -->
       <div class="col-12">
         <button type="submit" class="btn btn-primary">Speichern</button>
       </div>
